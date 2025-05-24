@@ -6,14 +6,82 @@
   <title>Bon Voyage Market</title>
   <link rel="stylesheet" href="styles.css">
   <style>
-    body { font-family: sans-serif; padding: 2rem; background-color: #fff9f9; color: #333; }
-    h1, h2 { text-align: center; color: #bf4e63; }
-    nav { text-align: center; margin-bottom: 2rem; }
-    nav a { margin: 0 1rem; color: #bf4e63; text-decoration: none; font-weight: bold; }
-    .featured-gallery { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
-    .featured-item { text-align: center; max-width: 200px; }
-    .featured-item img { width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-    .button { display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #bf4e63; color: #fff; border-radius: 4px; text-decoration: none; }
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fdfcfc;
+      color: #444;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #b94d5e;
+      font-weight: 500;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 2rem;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #b94d5e;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .intro p {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1rem;
+      color: #555;
+    }
+    .featured-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .featured-item {
+      text-align: center;
+      max-width: 160px;
+    }
+    .featured-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+    .featured-item p {
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+      color: #333;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background-color: #b94d5e;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s ease;
+    }
+    .button:hover {
+      background-color: #a84151;
+    }
   </style>
 </head>
 <body>
@@ -27,7 +95,7 @@
 
   <section class="intro">
     <h2>Welcome</h2>
-    <p style="text-align:center; max-width: 600px; margin: 0 auto;">
+    <p>
       I'm moving abroad and selling a selection of second-hand home and kitchen items. Delivery or collection available. Pay via bank transfer or PayPal.
     </p>
   </section>
@@ -48,10 +116,9 @@
         <p>Alice in Wonderland Teapot</p>
       </div>
     </div>
-    <div style="text-align:center; margin-top: 2rem;">
+    <div style="text-align:center;">
       <a class="button" href="items.html">View All Items</a>
     </div>
   </section>
-
 </body>
 </html>

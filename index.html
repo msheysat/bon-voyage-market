@@ -5,47 +5,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bon Voyage Market</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: sans-serif; padding: 2rem; background-color: #fff9f9; color: #333; }
+    h1, h2 { text-align: center; color: #bf4e63; }
+    nav { text-align: center; margin-bottom: 2rem; }
+    nav a { margin: 0 1rem; color: #bf4e63; text-decoration: none; font-weight: bold; }
+    .featured-gallery { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    .featured-item { text-align: center; max-width: 200px; }
+    .featured-item img { width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .button { display: inline-block; margin-top: 1rem; padding: 0.5rem 1rem; background-color: #bf4e63; color: #fff; border-radius: 4px; text-decoration: none; }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Bon Voyage Market</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="items.html">Shop Items</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <h1>Bon Voyage Market</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="items.html">Shop Items</a>
+    <a href="payment-instructions.html">How to Pay</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-  <main>
-    <section class="intro">
-      <h2>Welcome to Bon Voyage Market</h2>
-      <p>Explore unique kitchenware and home items from around the world. Curated with care, each piece tells a story.</p>
-      <a class="button" href="items.html">Shop Now</a>
-    </section>
+  <section class="intro">
+    <h2>Welcome</h2>
+    <p style="text-align:center; max-width: 600px; margin: 0 auto;">
+      I'm moving abroad and selling a selection of second-hand home and kitchen items. Delivery or collection available. Pay via bank transfer or PayPal.
+    </p>
+  </section>
 
-    <section class="featured">
-      <h2>Featured Items</h2>
-      <div class="featured-gallery">
-        <div class="featured-item">
-          <img src="images/square-1.jpg" alt="Japanese Square Dish">
-          <p>Japanese Blue & White Dishes</p>
-        </div>
-        <div class="featured-item">
-          <img src="images/appetiser-1.jpg" alt="Appetiser Dish Set">
-          <p>White Appetiser Set</p>
-        </div>
-        <div class="featured-item">
-          <img src="images/rustic-cups-1.jpg" alt="Rustic Cups">
-          <p>Japanese Rustic Cups</p>
-        </div>
+  <section class="featured">
+    <h2>Featured Items</h2>
+    <div class="featured-gallery">
+      <div class="featured-item">
+        <img src="images/rustic-cups-4.jpg" alt="Rustic Cups">
+        <p>Rustic Japanese Cups</p>
       </div>
-    </section>
-  </main>
+      <div class="featured-item">
+        <img src="images/bowls-1.jpg" alt="Cherry Blossom Bowls">
+        <p>Cherry Blossom Bowls</p>
+      </div>
+      <div class="featured-item">
+        <img src="images/alice-1.jpg" alt="Alice Teapot">
+        <p>Alice in Wonderland Teapot</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 2rem;">
+      <a class="button" href="items.html">View All Items</a>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Bon Voyage Market. All rights reserved.</p>
-  </footer>
 </body>
 </html>

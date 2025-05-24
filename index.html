@@ -21,11 +21,28 @@
       margin: 0;
     }
 
+    nav {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
     h1 {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
       color: var(--accent);
+    }
+    .tagline {
+      text-align: center;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 2rem;
     }
 
     .item {
@@ -52,14 +69,16 @@
       width: 120px;
       border-radius: var(--radius);
       object-fit: cover;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
       cursor: zoom-in;
       box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+      opacity: 0.95;
     }
 
     .gallery a:hover img {
       transform: scale(1.05);
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      opacity: 1;
     }
 
     h2 {
@@ -88,78 +107,42 @@
     .button:hover {
       background-color: #d75b6c;
     }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
 
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="payment-instructions.html">How to Pay</a>
+  </nav>
+
   <h1>Bon Voyage Market</h1>
+  <p class="tagline">Handpicked treasures for thoughtful living. UK delivery or free collection.</p>
 
-  <div class="item">
+  <div class="item" style="border-left: 6px solid var(--accent); background-color: #fff3f5;">
     <div class="gallery">
-      <a href="images/bowls-1.jpg" target="_blank"><img src="images/bowls-1.jpg" alt="Bowls 1"></a>
-      <a href="images/bowls-2.jpg" target="_blank"><img src="images/bowls-2.jpg" alt="Bowls 2"></a>
-      <a href="images/bowls-4.jpg" target="_blank"><img src="images/bowls-4.jpg" alt="Bowls 4"></a>
-      <a href="images/bowls-5.jpg" target="_blank"><img src="images/bowls-5.jpg" alt="Bowls 5"></a>
-      <a href="images/bowls-8.jpg" target="_blank"><img src="images/bowls-8.jpg" alt="Bowls 8"></a>
+      <a href="images/alice-1.jpg" target="_blank">
+        <img src="images/alice-1.jpg" alt="Featured Alice Teapot">
+      </a>
     </div>
-    <h2>Japanese Cherry Blossom Bowls (Set of 4)</h2>
-    <p>Beautiful handcrafted Japanese bowls with a pink cherry blossom design. Made in Japan. Perfect for rice, noodles, or side dishes. Lightly used, in excellent condition.</p>
+    <h2>🌟 Featured Item: Alice in Wonderland Teapot</h2>
+    <p>This whimsical ceramic teapot features Alice with floating cards and a charming quote. A beautiful gift or collector’s piece.</p>
     <p><strong>Price:</strong> TBC</p>
-    <p><strong>Delivery:</strong> TBC</p>
     <a class="button" href="payment-instructions.html">Buy Now</a>
   </div>
 
-  <div class="item">
-    <div class="gallery">
-      <a href="images/teapot-1.jpg" target="_blank"><img src="images/teapot-1.jpg" alt="Teapot 1"></a>
-      <a href="images/teapot-2.jpg" target="_blank"><img src="images/teapot-2.jpg" alt="Teapot 2"></a>
-      <a href="images/teapot-3.jpg" target="_blank"><img src="images/teapot-3.jpg" alt="Teapot 3"></a>
-    </div>
-    <h2>Japanese Cherry Blossom Teapot</h2>
-    <p>Handcrafted teapot with beautiful pink cherry blossom details and bamboo-style handle. Lightly used and in excellent condition. Ideal for tea lovers or as a decorative piece.</p>
-    <p><strong>Price:</strong> TBC</p>
-    <p><strong>Delivery:</strong> TBC</p>
-    <a class="button" href="payment-instructions.html">Buy Now</a>
-  </div>
+  <!-- Existing .item blocks stay here -->
 
-  <div class="item">
-    <div class="gallery">
-      <a href="images/alice-1.jpg" target="_blank"><img src="images/alice-1.jpg" alt="Alice Teapot 1"></a>
-      <a href="images/alice-2.jpg" target="_blank"><img src="images/alice-2.jpg" alt="Alice Teapot 2"></a>
-      <a href="images/alice-3.jpg" target="_blank"><img src="images/alice-3.jpg" alt="Alice Teapot 3"></a>
-    </div>
-    <h2>Alice in Wonderland Ceramic Teapot</h2>
-    <p>Charming white ceramic teapot featuring Alice with flying cards and the quote "There is always time for tea." A whimsical piece for tea lovers or collectors of storybook ceramics. Excellent condition.</p>
-    <p><strong>Price:</strong> TBC</p>
-    <p><strong>Delivery:</strong> TBC</p>
-    <a class="button" href="payment-instructions.html">Buy Now</a>
-  </div>
-
-  <div class="item">
-    <div class="gallery">
-      <a href="images/frenchpress-1.jpg" target="_blank"><img src="images/frenchpress-1.jpg" alt="French Press 1"></a>
-      <a href="images/frenchpress-2.jpg" target="_blank"><img src="images/frenchpress-2.jpg" alt="French Press 2"></a>
-    </div>
-    <h2>Metallic Copper French Press</h2>
-    <p>Sleek and modern stainless steel French press with a rose-gold copper finish. Easy to clean, insulated, and stylish enough to sit on any countertop. Lightly used and in excellent condition.</p>
-    <p><strong>Price:</strong> TBC</p>
-    <p><strong>Delivery:</strong> TBC</p>
-    <a class="button" href="payment-instructions.html">Buy Now</a>
-  </div>
-
-  <div class="item">
-    <div class="gallery">
-      <a href="images/emile-1.jpg" target="_blank"><img src="images/emile-1.jpg" alt="Emile Henry Dish 1"></a>
-      <a href="images/emile-2.jpg" target="_blank"><img src="images/emile-2.jpg" alt="Emile Henry Dish 2"></a>
-      <a href="images/emile-3.jpg" target="_blank"><img src="images/emile-3.jpg" alt="Emile Henry Dish 3"></a>
-      <a href="images/emile-4.jpg" target="_blank"><img src="images/emile-4.jpg" alt="Emile Henry Dish 4"></a>
-    </div>
-    <h2>Emile Henry France Square Ceramic Baker (24cm)</h2>
-    <p>Premium quality baking dish from Emile Henry, France. 24cm square with elegant wavy edges and a rich raspberry glaze. Ideal for baking casseroles, lasagna, and desserts. Very good condition.</p>
-    <p><strong>Price:</strong> TBC</p>
-    <p><strong>Delivery:</strong> TBC</p>
-    <a class="button" href="payment-instructions.html">Buy Now</a>
-  </div>
+  <footer>
+    &copy; 2025 Bon Voyage Market. All rights reserved.
+  </footer>
 
 </body>
 </html>

@@ -5,68 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Payment Instructions</title>
   <style>
+    :root {
+      --primary: #222;
+      --accent: #f67280;
+      --background: #ffffff;
+      --border: #eaeaea;
+      --radius: 10px;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fef8f5;
-      color: #444;
-      padding: 40px 20px;
-      max-width: 600px;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--primary);
+      padding: 2rem;
+      margin: 0;
+      max-width: 700px;
       margin: auto;
     }
+
     h1 {
       text-align: center;
-      color: #c06c84;
-      margin-bottom: 30px;
+      font-size: 2rem;
+      margin-bottom: 2rem;
     }
+
     p {
-      line-height: 1.8;
-      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 1rem;
     }
-    .contact-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      margin-top: 20px;
+
+    .contact-box, .success-message {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      margin: 1.5rem 0;
     }
-    .note {
-      color: #777;
-      font-size: 14px;
-      margin-top: 20px;
+
+    .success-message {
+      color: #155724;
+      background-color: #eafaf1;
+      border-color: #c6f1d6;
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      padding: 0.75rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #d75b6c;
+    }
+
     a {
-      color: #f67280;
+      color: var(--accent);
+      word-break: break-word;
+    }
+
+    .note {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 2rem;
     }
   </style>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const query = new URLSearchParams(window.location.search);
+      if (query.get("success") === "true") {
+        document.getElementById("success-box").style.display = "block";
+      }
+    });
+  </script>
 </head>
 <body>
 
   <h1>Payment Instructions</h1>
 
-  <p>Thank you for choosing to buy from Bon Voyage Market! 🌸</p>
+  <p>Thank you for choosing to buy from Bon Voyage Market!</p>
 
-  <p>To complete your order securely, please send your payment using PayPal:</p>
+  <p>To complete your order securely, please send your payment via PayPal:</p>
 
   <div class="contact-box">
     <p><strong>Pay here:</strong><br>
-    <a href="https://paypal.me/bonvoyagemarket?country.x=GB&amp;locale.x=en_GB" target="_blank">https://paypal.me/bonvoyagemarket</a></p>
+    <a href="https://paypal.me/bonvoyagemarket?country.x=GB&amp;locale.x=en_GB" target="_blank">paypal.me/bonvoyagemarket</a></p>
   </div>
 
-  <p>After payment, please message me with:</p>
+  <p>Once you've paid, please let me know:</p>
   <ul>
     <li>Your name</li>
-    <li>Your address (if requesting delivery)</li>
+    <li>Your delivery address (if applicable)</li>
     <li>The item(s) you purchased</li>
   </ul>
 
-  <p class="note">Alternatively, if you'd prefer bank transfer or collection, message me directly:</p>
+  <p>You can use the form below. I aim to respond within 1–2 working days.</p>
 
-  <div class="contact-box">
-    <p><strong>Email:</strong> your@email.com<br>
-    <strong>Instagram:</strong> @yourhandle</p>
+  <div id="success-box" class="success-message" style="display: none;">
+    ✅ Thank you! Your message has been sent successfully. I aim to respond within 1–2 working days.
   </div>
 
-  <p>Once payment is confirmed, I’ll arrange postage or collection.</p>
+  <form action="https://formspree.io/f/xeogbqng" method="POST">
+    <input type="hidden" name="_redirect" value="https://msheysat.github.io/bon-voyage-market/payment-instructions.html?success=true">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="tel" name="phone" placeholder="Your Phone Number (optional)">
+    <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <p class="note">Your details will only be used to respond to your query and arrange payment or delivery.</p>
 
 </body>
 </html>

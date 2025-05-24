@@ -5,52 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thank You</title>
   <style>
+    :root {
+      --primary: #222;
+      --accent: #f67280;
+      --background: #ffffff;
+      --border: #eaeaea;
+      --radius: 10px;
+    }
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fef8f5;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--background);
+      color: var(--primary);
       margin: 0;
-      padding: 20px;
-      color: #444;
-    }
-    .container {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 40px;
-      max-width: 700px;
-      margin: 80px auto;
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
     }
+
+    .container {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
     h1 {
-      color: #c06c84;
-      margin-bottom: 20px;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
     }
+
     p {
-      font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 30px;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
     }
+
     a.button {
-      background-color: #f67280;
-      color: #fff;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 10px;
       display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: var(--accent);
+      color: #fff;
+      border-radius: var(--radius);
+      text-decoration: none;
       transition: background 0.3s ease;
     }
+
     a.button:hover {
-      background-color: #c06c84;
+      background-color: #d75b6c;
     }
   </style>
 </head>
 <body>
+
   <div class="container">
     <h1>Thank You!</h1>
     <p>Your payment has been received and your item will be prepared for delivery or collection.</p>
-    <p>If you have any questions, feel free to reach out via email or WhatsApp.</p>
+    <p>If you have any questions, feel free to contact me using the form on the previous page.</p>
     <a href="index.html" class="button">Back to Shop</a>
   </div>
+
 </body>
 </html>
-
